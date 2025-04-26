@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     String email = emailController.text;
     int age = int.tryParse(ageController.text) ?? 0;
 
-    if (name.isEmpty || email.isEmpty || age <= 0) {
+    if (name.isEmpty || email.isEmpty || age <= 0 || !email.contains('@')) {
       Get.snackbar('Lỗi', 'Vui lòng nhập đầy đủ thông tin',
           backgroundColor: Colors.redAccent,
           colorText: Colors.white);
